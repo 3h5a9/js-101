@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript - 101</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      code{
+        font-size: .875em;
+        color: #14ff9c;
+        word-wrap: break-word;
+        background: #24183e;
+        padding: 2px 10px;
+        border-radius: 5px;
+        margin-bottom: .5rem;
+        display: inline-block;
+        line-height: 135%;
+      }
+      p{
+        margin-bottom: .5rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="/">JavaScript</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex ml-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+          <div class="row my-5">
+              <div class="col-md-8">
+                <h3>JavaScript Path!</h3>
+                <hr>
+                <div class="table-responsive small mt-5">
+                    <table class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>01</td>
+                          <td>JS-101</td>
+                          <td>29-11-2023</td>
+                          <td><a href="/task-01.html">Task - 01</a></td>
+                        </tr>
+                        <tr>
+                          <td>02</td>
+                          <td>JS-101</td>
+                          <td>29-11-2023</td>
+                          <td><a href="/task-02.html">Task - 02</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3>Notes</h3>
+                <hr>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="lead fw-bold">Variable</p>
+                    <p class="card-text">
+                      <code>let and var</code>
+                      <span>Value can be reasign.</span>
+                      <p>
+                        <code>
+                          let age = 30; <br>
+                          age = 31; <br>
+                          console.log(age);
+                        </code>
+                      </p>
+                    </p>
+                    <p class="card-text">
+                      <code>const</code>
+                      <span>Value can not be reasign</span>
+                      <p>
+                        <code>
+                          const birthYear = 30; <br>
+                          birthYear = 31; <br>
+                          console.log(birthYear);<br>
+                        </code>
+                        <p>
+                          This is going to show you an error in the console.
+                        </p>
+                        <code>
+                          Uncaught TypeError: invalid assignment to const 'birthYear'
+                        </code>
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Variables
+        let age = 30;
+        age = 31
+        console.log(age);
+
+        const birthYear = 30;
+        birthYear = 31;
+        console.log(birthYear);
+
+
+        // Store Mark's and John's mass and height in variables
+        const johnsheight = 1.95
+        const johnsweight = 92
+        const marksheight = 1.69
+        const marksweight = 78
+
+
+        // Calculate both their BMIs using the formula (you can even implement both versions)
+        // BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
+        const johnbim = johnsweight / johnsheight ** 2
+        console.log(`john's bim is: " ${johnbim}`)
+        const markbmi = marksweight / marksheight ** 2
+        console.log(`mark's bim is: ${markbmi}`)
+
+
+        // Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John
+        if (johnbim > markbmi){
+            console.log(`John's BMI ${johnbim} is higher than Mark's BMI ${markbmi}!`);
+        } else {
+            console.log(`Marks's BMI ${markbmi} is higher than John's! BMI ${johnbim}`);
+        }
+    </script>
+  </body>
+</html>
+
+
