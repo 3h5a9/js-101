@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeChallange - 03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      code{
+        font-size: .875em;
+        color: #14ff9c;
+        background: #24183e;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+      }
+      p{
+        margin-bottom: .5rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="/">JavaScript</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex ml-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+          <div class="row my-5">
+              <div class="col-md-7">
+                <h3>Coding Challenge # 3</h3>
+                <hr>
+                <p class="lead">
+                  There are two gymnastics teams, <span class="fw-bold">Dolphins</span> and <span class="fw-bold">Koalas</span>. They compete against each
+                  other 3 times. The winner with the highest average score wins a trophy!
+                </p>
+                <h4>Your tasks:</h4>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item">
+                    Calculate the average score for each team, using the test data below.
+                  </li>
+                  <li class="list-group-item">
+                    Compare the team's average scores to determine the winner of the competition,
+                    and print it to the console. Don't forget that there can be a draw, so test for that
+                    as well (draw means they have the same average score)
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Bonus 1:</span> Include a requirement for a minimum score of 100. With this rule, a
+                    team only wins if it has a higher score than the other team, and the same time a
+                    score of at least 100 points. Hint: Use a logical operator to test for minimum
+                    score, as well as multiple else-if blocks 😉
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Bonus 2:</span> Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+                  </li>
+                </ol>
+              </div>
+              <div class="col-md-5">
+                <h3>Data</h3>
+                <hr>
+                <ol class="list-group">
+                  <li class="list-group-item list-group-item-primary">Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110</li>
+                  <li class="list-group-item list-group-item-secondary">Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123</li>
+                  <li class="list-group-item list-group-item-warning">Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106</li>
+                </ol>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Team Score
+        // Dolphins Score
+        const dolpscr1 = 96;
+        const dolpscr2 = 108;
+        const dolpscr3 = 89;
+        const dolpscrsum = dolpscr1 + dolpscr2 + dolpscr3
+        const dolpscravg = dolpscrsum / 3;
+        console.log(`Dolphin's Total Score is ${dolpscrsum}`)
+        console.log(`Dolphin's average score is ${dolpscravg}`)
+        // Koalas Score
+        const koalscr1 = 88;
+        const koalscr2 = 91;
+        const koalscr3 = 110;
+        const koalscrsum = koalscr1 + koalscr2 + koalscr3
+        const koalscravg = koalscrsum / 3;
+        console.log(`Koal's Total Score is ${koalscrsum}`)
+        console.log(`Koal's average score is ${koalscravg}`)
+
+        // Winner
+        if (dolpscravg > koalscravg && dolpscrsum > 100){
+          console.log(`Dolphin have won the game with the average score of ${dolpscravg}`);
+        } else if (koalscravg > dolpscravg && koalscrsum > 100) {
+          console.log(`Koala have won the game with the average score of ${koalscravg}`);
+        }
+        else if (dolpscravg == koalscravg) {
+          console.log(`It's a draw, Koals score: ${koalscravg} and Dolphin's score: ${dolpscravg}`);
+        } else {
+          console.log("No Result!")
+        }
+    </script>
+  </body>
+</html>
+
+
