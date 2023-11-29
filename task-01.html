@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Task - 101</title>
+    <title>Task - 01</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      code{
+        font-size: .875em;
+        color: #14ff9c;
+        word-wrap: break-word;
+        background: #24183e;
+        padding: 2px 10px;
+        border-radius: 5px;
+        margin-bottom: .5rem;
+        display: inline-block;
+        line-height: 135%;
+      }
+      p{
+        margin-bottom: .5rem;
+      }
+    </style>
   </head>
   <body>
 
@@ -42,38 +59,79 @@
       </div>
     </nav>
 
-    <div class="container">
-        <div class="row my-5">
-            <h1>JavaScript Path!</h1>
-            <hr>
-            <div class="table-responsive small mt-5">
-                <table class="table table-striped table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Date</th>
-                      <th scope="col">Link</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>JS-101</td>
-                      <td>29-11-2023</td>
-                      <td><a href="/task-01.html">Task - 01</a></td>
-                    </tr>
-                    <tr>
-                      <td>02</td>
-                      <td>JS-101</td>
-                      <td>29-11-2023</td>
-                      <td><a href="/task-02.html">Task - 02</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    <main>
+      <div class="container">
+          <div class="row my-5">
+              <div class="col-md-8">
+                <h3>JavaScript Path!</h3>
+                <hr>
+                <div class="table-responsive small mt-5">
+                    <table class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>01</td>
+                          <td>JS-101</td>
+                          <td>29-11-2023</td>
+                          <td><a href="/task-01.html">Task - 01</a></td>
+                        </tr>
+                        <tr>
+                          <td>02</td>
+                          <td>JS-101</td>
+                          <td>29-11-2023</td>
+                          <td><a href="/task-02.html">Task - 02</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3>Notes</h3>
+                <hr>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="lead fw-bold">Variable</p>
+                    <p class="card-text">
+                      <code>let and var</code>
+                      <span>Value can be reasign.</span>
+                      <p>
+                        <code>
+                          let age = 30; <br>
+                          age = 31; <br>
+                          console.log(age);
+                        </code>
+                      </p>
+                    </p>
+                    <p class="card-text">
+                      <code>const</code>
+                      <span>Value can not be reasign</span>
+                      <p>
+                        <code>
+                          const birthYear = 30; <br>
+                          birthYear = 31; <br>
+                          console.log(birthYear);<br>
+                        </code>
+                        <p>
+                          This is going to show you an error in the console.
+                        </p>
+                        <code>
+                          Uncaught TypeError: invalid assignment to const 'birthYear'
+                        </code>
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </main>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
