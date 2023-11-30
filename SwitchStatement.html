@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Switch Statement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      code{
+        font-size: .875em;
+        color: #14ff9c;
+        background: #24183e;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+      }
+      p{
+        margin-bottom: .5rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="/">JavaScript</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex ml-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+          <div class="row my-5">
+              <div class="col-md-7">
+                <h3>Switch Statement</h3>
+                <hr>
+                <p class="lead">Although it is less used in real life, but some times we need this.Hence we should know this!</p>
+                
+              </div>
+              <div class="col-md-5">
+                <h3>Data</h3>
+                <hr>
+                <ol class="list-group">
+                  <li class="list-group-item list-group-item-primary"></li>
+                  <li class="list-group-item list-group-item-secondary"></li>
+                  <li class="list-group-item list-group-item-warning"></li>
+                </ol>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Case Statement
+      const day = "wednasday"
+      switch(day){
+        case "monday":
+          console.log("Course Structure.");
+          console.log("Write Demo.");
+          break;
+        case "tuesday":
+        case "wednasday":
+          console.log("Yet another task on tuesday");
+          console.log("Yet second task on wednasday");
+          break;
+        case "friday":
+          console.log("Write Code.")
+          break;
+        case "saturday":
+        case "sunday":
+          console.log("WeekEnd")
+          break;
+        default:
+          console.log("No Result")
+      }
+
+
+      // Same as above in If Else
+      if (day === "moday"){
+          console.log("Course Structure.");
+      } else if (day === "tuesday" || day === "wednasday") {
+          console.log("Yet another task on tuesday");
+          console.log("Yet second task on wednasday");
+      } else if (day === "thursday"){
+        console.log("Write Code.")
+      } else if (day === "friday"){
+        console.log("No Write Code.")
+      }else if (day === "saturday" || day === "sunday"){
+        console.log("Week End.")
+      } else {
+        console.log("No Result!")
+      }
+    </script>
+  </body>
+</html>
+
+
