@@ -62,7 +62,7 @@
       <div class="container">
           <div class="row my-5">
               <div class="col-md-7">
-                <h3>Coding Challenge # 3</h3>
+                <h3>Coding Challenge # 4</h3>
                 <hr>
                 <p class="lead">
                   Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
@@ -106,20 +106,20 @@
 
     <script>
       // Tip Calculator
-      const bill = 403;
+      const bill = 25;
       const tip15 = bill * 15 / 100;
       const tip20 = bill * 20 / 100;
       if (bill >= 50 && bill <= 300 ){
-        console.log(`Your order is ${bill} `);
-        console.log(`Tip will be 15% of total bill, that is ${tip15}`);
-        console.log(`So the total bill will be: ${bill + tip15}`);
+        console.log(`Your order is ${bill}, Tip is ${tip15}, total bill is: ${bill + tip15}`);
       } else if ( bill > 300){
-        console.log(`Your order is ${bill} `);
-        console.log(`Tip will be 20% of total bill, that is ${tip20}`);
-        console.log(`So the total bill will be: ${bill + tip20}`);
+        console.log(`Your order is ${bill}, Tip is ${tip20}, total bill id: ${bill + tip20}`);
       } else {
         console.log("Thank you!");
       }
+        
+      //Ternary Operator Way
+      const tip = bill >= 50 && bill <=300 ? bill * .15 : bill * .20;
+      console.log(`Tip: ${tip} and Bill: ${bill}, total: ${bill + tip}`);
     </script>
   </body>
 </html>
