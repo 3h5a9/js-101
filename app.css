@@ -1,0 +1,18 @@
+html, body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+code{
+	font-size: .875em;
+	color: #14ff9c;
+	word-wrap: break-word;
+	background: #24183e;
+	padding: 2px 10px;
+	border-radius: 5px;
+	margin-bottom: .5rem;
+	display: inline-block;
+	line-height: 135%;
+}
+p{
+	margin-bottom: .5rem;
+}
